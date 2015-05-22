@@ -2,7 +2,12 @@ class RepliesController < ApplicationController
 
   def new
     @topic = Topic.find(params[:topic_id])
-    @reply = @topic.replies.new
+
+    if current_user
+      @reply = @topic.replies.new
+    else
+      redirect_to topic_path(@topic)
+    end
   end
 
   def create
