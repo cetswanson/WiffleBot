@@ -1,6 +1,8 @@
 <% if @topics %>
   <% @topics.each do |topic| %>
-  <h1><%= topic.title %></h1>
+  <div id="topic_<%= topic.id %>">
+    <p><%= link_to topic.title, topic_path(topic) %> <%= topic.user.name %></p>
+  </div>
   <% end %>
 <% else %>
   </h1>There are currently no topics</h1>
