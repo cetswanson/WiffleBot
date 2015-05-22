@@ -1,2 +1,4 @@
 <%= @topic.title %>
 <%= @topic.body %>
+
+<%= link_to "Reply", new_topic_reply_path(@topic.id) %>
