@@ -13,4 +13,10 @@ class SessionsController < ApplicationController
       redirect_to root_path
     end
   end
+
+  def destroy
+    session_out!
+    redirect_to root_path
+  end
+
 end
