@@ -30,6 +30,8 @@ group :development, :test do
 
   gem 'capybara'
 
+  gem 'database_cleaner'
+
   gem 'web-console', '~> 2.0'
 
   gem 'spring'
