@@ -4,4 +4,13 @@ class SessionsController < ApplicationController
     @user = User.new
   end
 
+  def create
+    user = User.find_by(name: params[:user][:name])
+    if user && user.authenticate(params[:user][:password])
+      session_in!(user)
+      redirect_to root_path
+    else
+      redirect_to root_path
+    end
+  end
 end
