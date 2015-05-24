@@ -1,3 +1,5 @@
+<%= link_to "Add a topic", new_subforum_topic_path(@subforum) %>
+
 <% if @subforum %>
   <% @subforum.topics.all.each do |topic| %>
   <div id="topic_<%= topic.id %>">
