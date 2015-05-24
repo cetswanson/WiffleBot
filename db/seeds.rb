@@ -1,14 +1,20 @@
 require 'faker'
 
-User.create(name: "admin",
+admin = User.create(name: "admin",
             password: "password")
+
+10.times do
+  admin.subforums.create(title: Faker::Name.title,
+                        description: Faker::Name.title)
+end
 
 15.times do
   user = User.create(name: Faker::Internet.user_name,
                      password: Faker::Internet.password)
-  10.times do
-    user.topics.create(title: Faker::Name.title,
-                       body: Faker::Lorem.paragraph)
+  Subforum.all.each do |subforum|
+    subforum.topics.create(title: Faker::Name.title,
+                           body: Faker::Lorem.paragraph,
+                           user_id: user.id)
   end
 end
 
