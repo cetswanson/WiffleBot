@@ -7,11 +7,7 @@
     <%= f.text_field :name, id: "signin_name" %>
     <%= f.label :password, "Password: " %>
     <%= f.password_field :password, id: "signin_password" %>
-    <ul class="button-group">
-      <li>
-        <button class="small button" name="commit" type="submit">Sign In</button>
-      </li>
-    </ul>
+    <button class="small button" name="commit" type="submit">Sign In</button>
   <% end %>
 </div>
 
@@ -24,10 +20,6 @@
     <%= f.password_field :password, id: "signup_password" %>
     <%= f.label :password_confirmation %>
     <%= f.password_field :password_confirmation, id: "signup_password_confirmation" %>
-    <ul class="button-group">
-      <li>
-        <button class="small button" name="commit" type="submit">Sign Up</button>
-      </li>
-    </ul>
+    <button class="small button" name="commit" type="submit">Sign Up</button>
   <% end %>
 </div>
