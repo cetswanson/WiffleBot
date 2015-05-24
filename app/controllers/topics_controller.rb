@@ -8,6 +8,11 @@ class TopicsController < ApplicationController
     @topic = Topic.find(params[:id])
   end
 
+  def new
+    @subforum = Subforum.find(params[:subforum_id])
+    @topic = Topic.new
+  end
+
   def create
     user = current_user if current_user
     topic = user.topics.build(topic_params)
