@@ -18,4 +18,11 @@ class SubforumsController < ApplicationController
       redirect_to new_subforum_path
     end
   end
+
+  private
+
+  def subforum_params
+    params.require(:subforum).permit(:title, :description, :user_id)
+  end
+
 end
