@@ -1,0 +1,13 @@
+<div id="subforum_create">
+  <%= form_for @subforum do |f| %>
+    <%= f.label :title, "Title: " %>
+    <%= f.text_field :title, id: "subforum_title" %>
+    <%= f.label :description, "Description: " %>
+    <%= f.text_area :description, id: "subforum_description" %>
+    <ul class="button-group">
+      <li>
+        <button class="small button" name="commit" type="submit">Submit</button>
+      </li>
+    </ul>
+  <% end %>
+</div>

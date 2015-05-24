@@ -2,7 +2,6 @@ class TopicsController < ApplicationController
 
   def index
     @subforum = Subforum.find(params[:subforum_id])
-    # @topics = @subforum.topics.all if !@subforum.topics.all.empty?
   end
 
   def show

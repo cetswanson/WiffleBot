@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
     user = User.find_by(name: params[:user][:name])
     if user && user.authenticate(params[:user][:password])
       session_in!(user)
-      redirect_to topics_path
+      redirect_to subforums_path
     else
       redirect_to root_path
     end
