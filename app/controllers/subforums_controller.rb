@@ -4,4 +4,7 @@ class SubforumsController < ApplicationController
     @subforums = Subforum.all if !Subforum.all.empty?
   end
 
+  def new
+    @subforum = Subforum.new
+  end
 end
