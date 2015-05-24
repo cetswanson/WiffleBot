@@ -3,6 +3,9 @@ require 'spec_helper'
 require File.expand_path('../../config/environment', __FILE__)
 require 'rspec/rails'
 require 'capybara/rails'
+require 'capybara/rspec'
+require 'rack/test'
+require "rack_session_access/capybara"
 
 ActiveRecord::Migration.maintain_test_schema!
 
