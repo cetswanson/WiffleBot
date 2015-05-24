@@ -14,13 +14,13 @@ class TopicsController < ApplicationController
   end
 
   def create
-    user = current_user if current_user
-    topic = user.topics.build(topic_params)
+    subforum = Subforum.find(params[:subforum_id])
+    topic = subforum.topics.build(topic_params)
 
     if topic.save
-      redirect_to topic_path(topic)
+      redirect_to subforum_topics_path
     else
-      redirect_to topics_path
+      redirect_to subforum_topics_path
     end
   end
 
