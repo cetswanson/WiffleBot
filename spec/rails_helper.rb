@@ -31,6 +31,7 @@ RSpec.configure do |config|
     DatabaseCleaner.clean
   end
 
+  config.order = "random"
 
   config.infer_spec_type_from_file_location!
 end
