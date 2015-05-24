@@ -29,10 +29,14 @@ group :development, :test do
 
   gem 'capybara'
 
+  gem 'rack_session_access'
+
   gem 'database_cleaner'
 
   gem 'web-console', '~> 2.0'
 
   gem 'spring'
+
+  gem 'factory_girl_rails'
 end
 
