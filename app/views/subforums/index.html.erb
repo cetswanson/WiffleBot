@@ -1,3 +1,5 @@
+<%= link_to "Add a new subforum", new_subforum_path %>
+
 <% if @subforums %>
   <% @subforums.each do |subforum| %>
   <div id="subforum_<%= subforum.id %>">
