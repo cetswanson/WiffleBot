@@ -7,7 +7,7 @@ RSpec.feature "User creates a new subforum", :type => :feature do
   scenario "A user creates a new subforum correctly" do
     page.set_rack_session(user_id: user.id)
     visit subforums_path
-    click_on "Add a new subforum"
+    click_on "Add a new Subforum"
 
     fill_in "subforum_title", :with => "test"
     fill_in "subforum_description", :with => "test"
@@ -15,10 +15,10 @@ RSpec.feature "User creates a new subforum", :type => :feature do
     expect{click_button "Submit"}.to change{Subforum.count}.by(1)
   end
 
-  scenario "A user creates a new subforum with a title" do
+  scenario "A user creates a new subforum without a title" do
     page.set_rack_session(user_id: user.id)
     visit subforums_path
-    click_on "Add a new subforum"
+    click_on "Add a new Subforum"
 
     fill_in "subforum_description", :with => "test"
 
