@@ -15,7 +15,7 @@ class SubforumsController < ApplicationController
     if @subforum.save
       redirect_to subforum_topics_path(@subforum)
     else
-      redirect_to new_subforum_path
+      head :bad_request
     end
   end
 
