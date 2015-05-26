@@ -24,16 +24,19 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'faker'
 
 group :development, :test do
-  gem 'byebug'
 
   gem 'rspec-rails', '~> 3.0'
 
   gem 'capybara'
+
+  gem 'rack_session_access'
 
   gem 'database_cleaner'
 
   gem 'web-console', '~> 2.0'
 
   gem 'spring'
+
+  gem 'factory_girl_rails'
 end
 

@@ -3,6 +3,9 @@ require 'spec_helper'
 require File.expand_path('../../config/environment', __FILE__)
 require 'rspec/rails'
 require 'capybara/rails'
+require 'capybara/rspec'
+require 'rack/test'
+require "rack_session_access/capybara"
 
 ActiveRecord::Migration.maintain_test_schema!
 
@@ -28,6 +31,7 @@ RSpec.configure do |config|
     DatabaseCleaner.clean
   end
 
+  config.order = "random"
 
   config.infer_spec_type_from_file_location!
 end

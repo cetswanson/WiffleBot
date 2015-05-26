@@ -1,0 +1,11 @@
+<%= link_to "Add a new subforum", new_subforum_path %>
+
+<% if @subforums %>
+  <% @subforums.each do |subforum| %>
+  <div id="subforum_<%= subforum.id %>">
+    <p><%= link_to subforum.title, subforum_topics_path(subforum) %> <%= subforum.user.name %></p>
+  </div>
+  <% end %>
+<% else %>
+  </h1>There are currently no subforums</h1>
+<% end %>

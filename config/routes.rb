@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
 
-  resources :topics do
-    resources :replies
+  resources :subforums do
+    resources :topics do
+      resources :replies
+    end
   end
 
   resource :session, :only => [:new, :create, :destroy]
