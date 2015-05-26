@@ -1,11 +1,30 @@
-<%= link_to "Add a new subforum", new_subforum_path %>
+<button id="subforumButton" type="button small" class="btn btn-info btn-sm" data-toggle="modal" data-target="#subforumModal">Add a new Subforum</button>
 
 <% if @subforums %>
   <% @subforums.each do |subforum| %>
-  <div id="subforum_<%= subforum.id %>">
-    <p><%= link_to subforum.title, subforum_topics_path(subforum) %> <%= subforum.user.name %></p>
+  <div class="panel panel-info" id="subforum_<%= subforum.id %>">
+    <div class="panel-title">
+      <%= link_to subforum.title, subforum_topics_path(subforum) %>
+    </div>
+    <div class="panel-footer">
+      <%= subforum.description %>
+    </div>
   </div>
   <% end %>
 <% else %>
   </h1>There are currently no subforums</h1>
 <% end %>
+
+<div id="subforumModal" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Add a New Subforum</h4>
+      </div>
+      <div class="modal-body">
+        <%= render "subforums/new" %>
+      </div>
+    </div>
+  </div>
+</div>

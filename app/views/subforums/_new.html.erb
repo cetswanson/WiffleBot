@@ -1,5 +1,5 @@
 <div id="subforum_create">
-  <%= form_for @subforum do |f| %>
+  <%= form_for Subforum.new do |f| %>
     <%= f.label :title, "Title: " %>
     <%= f.text_field :title, id: "subforum_title" %>
     <%= f.label :description, "Description: " %>
