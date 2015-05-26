@@ -5,6 +5,7 @@ class TopicsController < ApplicationController
   end
 
   def show
+    @subforum = Subforum.find(params[:subforum_id])
     @topic = Topic.find(params[:id])
   end
 
