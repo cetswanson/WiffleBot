@@ -3,7 +3,14 @@
 <% if @subforum %>
   <% @subforum.topics.all.each do |topic| %>
   <div id="topic_<%= topic.id %>">
-    <p><%= link_to topic.title, subforum_topic_path(@subforum, topic) %></p>
+    <div class="panel panel-info" id="topic_<%= topic.id %>">
+      <div class="panel-title">
+        <%= link_to topic.title, subforum_topic_path(@subforum, topic) %>
+      </div>
+      <div class="panel-footer">
+        <%= topic.user %>
+      </div>
+    </div>
   </div>
   <% end %>
 <% else %>
