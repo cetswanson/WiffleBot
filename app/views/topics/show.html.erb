@@ -6,6 +6,15 @@
   </div>
 </div>
 
+<a class="btn btn-info btn-sm" role="button" id="replyButton" href="#">Reply</a>
+<div id="reply" hidden>
+  <%= form_for [@subforum, @topic, Reply.new] do |f| %>
+    <%= f.label :body, "Body: " %>
+    <%= f.text_area :body, id: "reply_body" %>
+    <button class="small button" name="commit" type="submit">Submit</button>
+  <% end %>
+</div>
+
 <% @topic.replies.each do |reply| %>
 <div class="panel panel-info" id="post_<%= reply.id %>">
   <div class="panel-heading">
