@@ -1,4 +1,13 @@
-<%= link_to "Add a topic", new_subforum_topic_path(@subforum) %>
+<a class="btn btn-info btn-sm" role="button" id="newTopicButton" href="#">Add a topic</a>
+<div id="topic_create">
+  <%= form_for [@subforum, Topic.new] do |f| %>
+    <%= f.label :title, "Title: " %>
+    <%= f.text_field :title, id: "topic_title" %>
+    <%= f.label :body, "Body: " %>
+    <%= f.text_area :body, id: "topic_description" %>
+    <button class="small button" name="commit" type="submit">Submit</button>
+  <% end %>
+</div>
 
 <% if @subforum %>
   <% @subforum.topics.all.each do |topic| %>
