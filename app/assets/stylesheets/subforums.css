@@ -1,0 +1,27 @@
+
+.subforumsIndex {
+  background: #808080;
+  margin-top: 4%;
+  background-image: url("witch-king.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  position: relative;
+}
+
+#subforum_topic {
+  background-color: rgba(192,192,192, 0.40);
+  border: none;
+  -webkit-box-shadow: 2px 2px 4px #888;
+  -moz-box-shadow: 2px 2px 4px #888;
+  box-shadow: 2px 2px 4px #888;
+}
+
+#topic_description {
+  background-color: rgba(248, 247, 216, 0.40);
+  border-color: black;
+  -webkit-box-shadow: 2px 2px 4px #888;
+  -moz-box-shadow: 2px 2px 4px #888;
+  box-shadow: 2px 2px 4px #888;
+}
+
