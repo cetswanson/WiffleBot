@@ -13,11 +13,26 @@
   <% if @subforum %>
     <% @subforum.topics.all.each do |topic| %>
     <div class="panel panel-info topic" id="topic">
-      <div class="panel-title">
-        <%= link_to topic.title, subforum_topic_path(@subforum, topic) %>
-      </div>
       <div class="panel-body">
-        <%= topic.user.name %>
+        <div class="topicTitle">
+          <%= link_to topic.title, subforum_topic_path(@subforum, topic) %>
+        </div>
+        <div class="replies">
+          <b>Replies:</b>
+          <%= topic.replies.count %>
+        </div>
+        <div class="username">
+          <b>Creator:</b>
+          <%= topic.user.name %>
+        </div>
+        <div class="created_at">
+          <b>Created At:</b>
+          <%= topic.created_at %>
+        </div>
+        <div class="last_post">
+          <b>Last Post:</b>
+          <%= topic.replies.last.updated_at unless !topic.replies.first %>
+        </div>
       </div>
     </div>
     <% end %>
@@ -25,3 +40,4 @@
     </h1>There are currently no topics</h1>
   <% end %>
 </div>
+
