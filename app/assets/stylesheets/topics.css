@@ -1,0 +1,19 @@
+#newTopic {
+  width: 10%;
+}
+
+.topicIndex {
+  background-image: url("nazgul.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  position: relative;
+}
+
+#topic {
+  background-color: rgba(192,192,192, 0.60);
+  border: none;
+  -webkit-box-shadow: 2px 2px 4px #888;
+  -moz-box-shadow: 2px 2px 4px #888;
+  box-shadow: 2px 2px 4px #888;
+}
