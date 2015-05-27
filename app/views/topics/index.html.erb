@@ -12,7 +12,7 @@
 <div class="topicIndex">
   <% if @subforum %>
     <% @subforum.topics.all.each do |topic| %>
-    <div class="panel panel-info" id="topic">
+    <div class="panel panel-info topic" id="topic">
       <div class="panel-title">
         <%= link_to topic.title, subforum_topic_path(@subforum, topic) %>
       </div>
