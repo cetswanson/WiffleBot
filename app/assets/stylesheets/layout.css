@@ -1,3 +1,7 @@
+html, body {
+  background: #808080;
+}
+
 .panel {
   width: 70%;
   margin-left: 15%;
