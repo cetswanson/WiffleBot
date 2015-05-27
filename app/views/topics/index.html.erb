@@ -9,19 +9,19 @@
   <% end %>
 </div>
 
-<% if @subforum %>
-  <% @subforum.topics.all.each do |topic| %>
-  <div id="topic_<%= topic.id %>">
-    <div class="panel panel-info" id="topic_<%= topic.id %>">
+<div class="topicIndex">
+  <% if @subforum %>
+    <% @subforum.topics.all.each do |topic| %>
+    <div class="panel panel-info" id="topic">
       <div class="panel-title">
         <%= link_to topic.title, subforum_topic_path(@subforum, topic) %>
       </div>
-      <div class="panel-footer">
+      <div class="panel-body">
         <%= topic.user.name %>
       </div>
     </div>
-  </div>
+    <% end %>
+  <% else %>
+    </h1>There are currently no topics</h1>
   <% end %>
-<% else %>
-  </h1>There are currently no topics</h1>
-<% end %>
+</div>
