@@ -2,9 +2,9 @@
   <%= form_for User.new, html: { class: "form-signin" } do |f| %>
     <div class="modal-body">
       <%= f.label :name, "Username: " %><br>
-      <%= f.text_field :name, id: "signin_name" %><br>
+      <%= f.text_field :name, id: "signup_name" %><br>
       <%= f.label :password, "Password: " %><br>
-      <%= f.password_field :password, id: "signin_password" %><br>
+      <%= f.password_field :password, id: "signup_password" %><br>
       <%= f.label :password_confirmation, "Password Confirmation: " %><br>
       <%= f.password_field :password_confirmation, id: "signup_password_confirmation" %>
     </div>
