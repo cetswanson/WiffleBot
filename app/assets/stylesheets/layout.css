@@ -3,3 +3,25 @@
   margin-left: 15%;
   margin-right: 15%;
 }
+
+#background {
+  width: 100%;
+  margin-top: 0%;
+}
+
+.pageTitle {
+  color: white;
+  font-size: 6em;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.indexPageElements {
+  position: absolute;
+  top: 18%;
+  margin-left: 62%;
+}
+
+.userOptions {
+  top: 25%;
+  margin-left:60%;
+}

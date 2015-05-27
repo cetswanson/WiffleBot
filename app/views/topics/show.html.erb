@@ -18,11 +18,10 @@
 <% @topic.replies.each do |reply| %>
 <div class="panel panel-info" id="post_<%= reply.id %>">
   <div class="panel-heading">
-    <%= reply.user.name %>
+    <%= reply.user.name if reply.user %>
   </div>
   <div class="panel-title">
     <%= reply.body %>
   </div>
 </div>
 <% end %>
-

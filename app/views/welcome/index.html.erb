@@ -1,1 +1,21 @@
-<h1>Welcome to WiffleBot</h1>
+<html>
+<style>
+   nav { display: none; }
+</style>
+
+
+  <div class="indexPageElements">
+    <a class="pageTitle" href=>WiffleBot</a>
+    <div class="userOptions" hidden>
+      <% if !current_user %>
+      <button id="signinButton" type="button small" class="btn btn-info btn-sm" data-toggle="modal" data-target="#signinModal">Sign In</button>
+      <button id="signupButton" type="button small" class="btn btn-info btn-sm" data-toggle="modal" data-target="#signupModal">Sign Up</button>
+      <% else %>
+      <a class="btn btn-info btn-sm" role="button" href="<%= subforums_path %>">Home</a>
+      <a class="btn btn-info btn-sm" role="button" href="<%= signout_path %>">Sign Out</a>
+      <% end %>
+    </div>
+  </div>
+
+<%= image_tag("backgroundimg.jpg", id: "background") %>
+</html>
