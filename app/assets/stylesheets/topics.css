@@ -3,17 +3,35 @@
 }
 
 .topicIndex {
-  background-image: url("nazgul.jpg");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: 100% 100%;
-  position: relative;
+  width: 100%;
+  margin-top: 0%;
 }
 
 #topic {
+  position: relative;
   background-color: rgba(192,192,192, 0.60);
   border: none;
   -webkit-box-shadow: 2px 2px 4px #888;
   -moz-box-shadow: 2px 2px 4px #888;
   box-shadow: 2px 2px 4px #888;
+  color: black !important;
+  z-index: 3;
+}
+
+.topicTitle {
+  width: 70%;
+  height: 75%;
+  position: absolute;
+  margin-left: 25%;
+  text-align: center;
+  font-family: Century;
+  font-weight: bold;
+  font-size: 2em;
+  background-color: rgba(0, 0, 0, 0.60);
+  border-radius: 2px;
+}
+
+.panel-body {
+  color: black !important;
+  margin-left: 3%;
 }
