@@ -23,6 +23,6 @@ RSpec.feature "User creates a new subforum", :type => :feature do
 
     fill_in "subforum_description", :with => "test"
 
-    expect{click_button "Submit"}.not_to change(Subforum, :count)
+    expect{click_on "subforumSubmit"}.not_to change(Subforum, :count)
   end
 end
