@@ -1,0 +1,86 @@
+html, body {
+  background: #808080;
+}
+
+.panel {
+  width: 70%;
+  margin-left: 15%;
+  margin-right: 15%;
+  box-shadow: 10px 10px 5px #888888;
+}
+
+#background {
+  width: 100%;
+  margin-top: 0%;
+}
+
+.pageTitle {
+  color: black;
+  font-size: 6em;
+  font-family: 'Century', serif;
+}
+
+.indexPageElements {
+  position: fixed;
+  top: 18%;
+  margin-left: 62%;
+}
+
+.layer {
+  background-color: rgba(248, 247, 216, 0.2);
+  position: fixed;
+  top: 15%;
+  left: 0;
+  width: 100%;
+  height: 20%;
+}
+
+.btn-secondary {
+  margin-left: 5%;
+  width: 40%;
+  color: #ffffff;
+  background-color: #000000;
+}
+
+.subforumsIndex {
+  background: #808080;
+  margin-top: 4%;
+  background-image: url("witch-king.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  position: relative;
+}
+
+#subforum_topic {
+  background-color: rgba(192,192,192, 0.40);
+  border: none;
+  -webkit-box-shadow: 2px 2px 4px #888;
+  -moz-box-shadow: 2px 2px 4px #888;
+  box-shadow: 2px 2px 4px #888;
+}
+
+#topic_description {
+  background-color: rgba(248, 247, 216, 0.40);
+  border-color: black;
+  -webkit-box-shadow: 2px 2px 4px #888;
+  -moz-box-shadow: 2px 2px 4px #888;
+  box-shadow: 2px 2px 4px #888;
+}
+
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+
