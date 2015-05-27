@@ -4,7 +4,6 @@ RSpec.feature "User signs up", :type => :feature do
 
   scenario "without valid credentials" do
     visit root_path
-    click_on "signupButton"
 
     fill_in "signup_name", :with => "test"
     fill_in "signup_password", :with => "password"

@@ -1,27 +1,44 @@
-<a class="btn btn-info btn-sm" role="button" id="newTopicButton" href="#">Add a topic</a>
+<a class="btn btn-secondary" role="button" id="newTopicButton" href="#">Add a topic</a>
 <div id="topic_create">
   <%= form_for [@subforum, Topic.new] do |f| %>
     <%= f.label :title, "Title: " %>
     <%= f.text_field :title, id: "topic_title" %>
     <%= f.label :body, "Body: " %>
     <%= f.text_area :body, id: "topic_description" %>
-    <button class="small button" name="commit" type="submit">Submit</button>
+    <button class="btn btn-secondary" id="newTopic" name="commit" type="submit">Submit</button>
   <% end %>
 </div>
 
-<% if @subforum %>
-  <% @subforum.topics.all.each do |topic| %>
-  <div id="topic_<%= topic.id %>">
-    <div class="panel panel-info" id="topic_<%= topic.id %>">
-      <div class="panel-title">
-        <%= link_to topic.title, subforum_topic_path(@subforum, topic) %>
-      </div>
-      <div class="panel-footer">
-        <%= topic.user.name %>
+<div class="topicIndex">
+  <%= image_tag("nazgul.jpg", id: "background") %>
+  <% if @subforum %>
+    <% @subforum.topics.all.each do |topic| %>
+    <div class="panel panel-info topic" id="topic">
+      <div class="panel-body">
+        <div class="topicTitle">
+          <%= link_to topic.title, subforum_topic_path(@subforum, topic) %>
+        </div>
+        <div class="replies">
+          <b>Replies:</b>
+          <%= topic.replies.count %>
+        </div>
+        <div class="username">
+          <b>Creator:</b>
+          <%= topic.user.name %>
+        </div>
+        <div class="created_at">
+          <b>Created At:</b>
+          <%= topic.created_at %>
+        </div>
+        <div class="last_post">
+          <b>Last Post:</b>
+          <%= topic.replies.last.updated_at unless !topic.replies.first %>
+        </div>
       </div>
     </div>
-  </div>
+    <% end %>
+  <% else %>
+    </h1>There are currently no topics</h1>
   <% end %>
-<% else %>
-  </h1>There are currently no topics</h1>
-<% end %>
+</div>
+
