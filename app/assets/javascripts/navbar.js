@@ -5,6 +5,8 @@ $(document).ready(function(){
   });
     $(".pageTitle").on('click', function(event) {
       event.preventDefault();
-      $(".userOptions").show()
+      $(".pageTitle").css("color", "black");
+      $(".userOptions").show();
+      $(".layer").css("height", "30%");
    });
 });
