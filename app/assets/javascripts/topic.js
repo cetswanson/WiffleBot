@@ -10,4 +10,7 @@ $(document).ready(function(){
    $(".topic").on('mouseover', function(event) {
       $(this).css("background-color", "rgba(192,192,192, 0.8)")
    });
+   $(".topic").on('mouseleave', function(event) {
+      $(this).css("background-color", "rgba(192,192,192, 0.6)")
+   });
 });
