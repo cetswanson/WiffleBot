@@ -5,10 +5,11 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.create(user_params)
+    user = User.create(user_params)
 
-    if @user.valid?
-      redirect_to root_path
+    if user.valid?
+      session_in!(user)
+      redirect_to subforums_path
     else
       redirect_to root_path
     end
