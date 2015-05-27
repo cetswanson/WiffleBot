@@ -12,7 +12,8 @@ RSpec.feature "User creates a new subforum", :type => :feature do
     fill_in "subforum_title", :with => "test"
     fill_in "subforum_description", :with => "test"
 
-    expect{click_button "Submit"}.to change{Subforum.count}.by(1)
+    click_on "subforumSubmit"
+    expect(page).to have_text("test")
   end
 
   scenario "A user creates a new subforum without a title" do
