@@ -1,5 +1,5 @@
-<a class="btn btn-info btn-sm" role="button" id="newTopicButton" href="#">Add a topic</a>
-<div id="topic_create">
+<a class="btn btn-secondary" role="button" id="newTopicButton" href="#">Add a topic</a>
+<div id="topic_create" hidden>
   <%= form_for [@subforum, Topic.new] do |f| %>
     <%= f.label :title, "Title: " %>
     <%= f.text_field :title, id: "topic_title" %>
