@@ -10,6 +10,7 @@
 </div>
 
 <div class="topicIndex">
+  <%= image_tag("nazgul.jpg", id: "background") %>
   <% if @subforum %>
     <% @subforum.topics.all.each do |topic| %>
     <div class="panel panel-info topic" id="topic">
