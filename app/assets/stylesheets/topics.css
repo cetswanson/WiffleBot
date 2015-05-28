@@ -28,6 +28,15 @@
   z-index: 3;
 }
 
+.subforumTitle{
+  position: relative;
+  text-align: center;
+  font-size: 6em;
+  font-family: 'Century', serif;
+  z-index: 1;
+  margin-top: 0%;
+}
+
 .topicTitle {
   width: 70%;
   height: 75%;
