@@ -8,7 +8,7 @@ Bundler.require(*Rails.groups)
 
 module WiffleBot
   class Application < Rails::Application
-    config.serve_static_assets = true
+    config.serve_static_file = true
     config.active_record.raise_in_transactional_callbacks = true
   end
 end
