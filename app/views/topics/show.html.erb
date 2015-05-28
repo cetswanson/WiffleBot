@@ -15,7 +15,7 @@
         </div>
         <div class="username">
           <b>Creator:</b>
-          <%= @topic.user.name %>
+          <%= link_to @topic.user.name, user_path(@topic.user) %>
         </div>
         <div class="created_at">
           <b>Created At:</b>
@@ -52,7 +52,7 @@
         </div>
         <div class="username">
           <b>Creator:</b>
-          <%= reply.user.name unless !reply.user %>
+          <%= link_to reply.user.name, user_path(reply.user) unless !reply.user %>
         </div>
         <div class="created_at">
           <b>Created At:</b>
