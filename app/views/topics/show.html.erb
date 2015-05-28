@@ -1,27 +1,67 @@
-<div class="panel panel-info" id="topic_<%= @topic.id %>">
-  <div class="panel-title">
-    <h3><%= @topic.title %></h3>
-    <p><%= @topic.user.name %></p>
-    <p><%= @topic.body %></p>
-  </div>
+<%= image_tag("nazgul.jpg", id: "background") %>
+
+<br><br><br>
+<div class="topicIndex">
+  <% if @topic %>
+    <div class="panel panel-info topic" id="topic">
+      <div class="panel-body">
+        <div class="topicTitle">
+          <%= @topic.title %>
+          <%= @topic.body %>
+        </div>
+        <div class="replies">
+          <b>Replies:</b>
+          <%= @topic.replies.count %>
+        </div>
+        <div class="username">
+          <b>Creator:</b>
+          <%= @topic.user.name %>
+        </div>
+        <div class="created_at">
+          <b>Created At:</b>
+          <%= @topic.created_at %>
+        </div>
+        <div class="last_post">
+          <b>Last Post:</b>
+          <%= @topic.replies.last.updated_at unless !@topic.replies.first %>
+        </div>
+      </div>
+    </div>
+  <% else %>
+    </h1>There are currently no topics</h1>
+  <% end %>
 </div>
 
-<a class="btn btn-info btn-sm" role="button" id="replyButton" href="#">Reply</a>
+
+<a class="btn btn-secondary" role="button" id="replyButton" href="#">Reply</a>
 <div id="reply" hidden>
   <%= form_for [@subforum, @topic, Reply.new] do |f| %>
     <%= f.label :body, "Body: " %>
     <%= f.text_area :body, id: "reply_body" %>
-    <button class="small button" name="commit" type="submit">Submit</button>
+    <button class="btn btn-secondary" name="commit" type="submit">Submit</button>
   <% end %>
 </div>
 
-<% @topic.replies.each do |reply| %>
-<div class="panel panel-info" id="post_<%= reply.id %>">
-  <div class="panel-heading">
-    <%= reply.user.name if reply.user %>
-  </div>
-  <div class="panel-title">
-    <%= reply.body %>
-  </div>
+<div class="replyIndex">
+  <% if @topic %>
+    <% @topic.replies.all.each do |reply| %>
+    <div class="panel panel-info topic" id="topic">
+      <div class="panel-body">
+        <div class="replyTitle">
+          <%= reply.body %>
+        </div>
+        <div class="username">
+          <b>Creator:</b>
+          <%= reply.user.name unless !reply.user %>
+        </div>
+        <div class="created_at">
+          <b>Created At:</b>
+          <%= reply.created_at %>
+        </div>
+      </div>
+    </div>
+    <% end %>
+  <% else %>
+    </h1>There are currently no replies</h1>
+  <% end %>
 </div>
-<% end %>

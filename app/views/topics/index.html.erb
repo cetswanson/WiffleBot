@@ -1,16 +1,14 @@
-<a class="btn btn-secondary" role="button" id="newTopicButton" href="#">Add a topic</a>
-<div id="topic_create">
-  <%= form_for [@subforum, Topic.new] do |f| %>
-    <%= f.label :title, "Title: " %>
-    <%= f.text_field :title, id: "topic_title" %>
-    <%= f.label :body, "Body: " %>
-    <%= f.text_area :body, id: "topic_description" %>
-    <button class="btn btn-secondary" id="newTopic" name="commit" type="submit">Submit</button>
-  <% end %>
+<%= image_tag("nazgul.jpg", id: "background") %>
+
+<br><br>
+<div class="subforumLayer">
 </div>
 
+<h1 class="subforumTitle">
+  <%= @subforum.title %>
+</h1>
+
 <div class="topicIndex">
-  <%= image_tag("nazgul.jpg", id: "background") %>
   <% if @subforum %>
     <% @subforum.topics.all.each do |topic| %>
     <div class="panel panel-info topic" id="topic">
@@ -42,3 +40,13 @@
   <% end %>
 </div>
 
+<a class="btn btn-secondary" role="button" id="newTopicButton" href="#">Add a topic</a>
+<div id="topic_create">
+  <%= form_for [@subforum, Topic.new] do |f| %>
+    <%= f.label :title, "Title: " %>
+    <%= f.text_field :title, id: "topic_title" %>
+    <%= f.label :body, "Body: " %>
+    <%= f.text_area :body, id: "topic_description" %>
+    <button class="btn btn-secondary" id="newTopic" name="commit" type="submit">Submit</button>
+  <% end %>
+</div>
