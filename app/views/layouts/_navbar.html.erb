@@ -10,6 +10,12 @@
       </li>
     </ul>
       <% else %>
+      <form class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-danger">Submit</button>
+      </form>
       <li>
         <a href="<%= signout_path %>">Sign Out</a>
       </li>
