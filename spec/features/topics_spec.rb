@@ -13,7 +13,7 @@ RSpec.feature "User creates a new topic", :type => :feature do
     fill_in "topic_title", :with => "test"
     fill_in "topic_description", :with => "test"
 
-    expect{click_button "Submit"}.to change{Topic.count}.by(1)
+    expect{click_on "newTopic"}.to change{Topic.count}.by(1)
   end
 
   scenario "A user creates a new topic correctly" do
@@ -23,7 +23,7 @@ RSpec.feature "User creates a new topic", :type => :feature do
 
     fill_in "topic_description", :with => "test"
 
-    expect{click_button "Submit"}.not_to change(Topic, :count)
+    expect{click_on "newTopic"}.not_to change(Topic, :count)
   end
 
 end
