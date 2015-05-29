@@ -1,7 +1,11 @@
 class SubforumsController < ApplicationController
 
   def index
-    @subforums = Subforum.all if !Subforum.all.empty?
+    if current_user
+      @subforums = Subforum.all if !Subforum.all.empty?
+    else
+      redirect_to root_path
+    end
   end
 
   def new
