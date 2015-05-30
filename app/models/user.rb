@@ -3,8 +3,6 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable.
          :confirmable
 
-  has_secure_password
-
   has_many :subforums
   has_many :topics
   has_many :replies
