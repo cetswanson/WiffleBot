@@ -31,6 +31,8 @@ RSpec.configure do |config|
     DatabaseCleaner.clean
   end
 
+  config.include Devise::TestHelpers, type: :controller
+
   config.order = "random"
 
   config.infer_spec_type_from_file_location!

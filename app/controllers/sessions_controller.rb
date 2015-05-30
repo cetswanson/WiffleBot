@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
 
   def create
     user = User.find_by(name: params[:user][:name])
-    if user && user.authenticate(params[:user][:password])
+    if user
       session_in!(user)
       redirect_to subforums_path
     else

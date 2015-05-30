@@ -1,7 +1,8 @@
 require 'faker'
 
 admin = User.create(name: "admin",
-            password: "password")
+                    password: "password",
+                    email: "cetswanson@gmail.com")
 
 10.times do
   admin.subforums.create(title: Faker::Name.title,
