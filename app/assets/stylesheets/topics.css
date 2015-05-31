@@ -37,10 +37,10 @@
 }
 
 .topicTitle {
-  width: 70%;
-  height: 75%;
+  width: 20em;
+  height: 3em;
   position: absolute;
-  margin-left: 25%;
+  margin-left: 12em;
   text-align: center;
   font-family: Century;
   font-weight: bold;
