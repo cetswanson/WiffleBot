@@ -27,13 +27,13 @@
 }
 
 .subforumTitle{
+  margin-top: .5em;
   position: relative;
   text-align: center;
-  font-size: 6em;
+  font-size: 5em;
   font-family: 'Century', serif;
   color: black;
   z-index: 1;
-  margin-top: 0%;
 }
 
 .topicTitle {
