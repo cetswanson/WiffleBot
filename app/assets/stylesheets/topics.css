@@ -62,3 +62,8 @@
   color: white;
   z-index: 3;
 }
+
+#topic_description_form {
+  width: 900px;
+  height: 303px;
+}
