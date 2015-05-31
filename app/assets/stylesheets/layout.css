@@ -11,7 +11,8 @@ html, body {
 
 #background {
   position: fixed;
-  width: 100%;
+  min-width: 100%;
+  min-height: 100%;
   margin-top: 0%;
   margin-bottom: 0%;
   z-index: 0;
@@ -25,7 +26,7 @@ html, body {
 
 .indexPageElements {
   position: fixed;
-  top: 18%;
+  top: 10em;
   margin-left: 62%;
   z-index: 1;
 }

@@ -10,6 +10,11 @@
       </li>
     </ul>
       <% else %>
+      <li class="active">
+        <% if @subforum %>
+          <%= link_to "Add a new topic", new_subforum_topic_path(@subforum) %>
+        <% end %>
+      </li>
       <form class="navbar-form navbar-left" role="search">
         <div class="form-group">
           <input type="text" class="form-control" placeholder="Search">
