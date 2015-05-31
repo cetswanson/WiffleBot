@@ -71,3 +71,8 @@
 #topic_title_form {
   width: 900px;
 }
+
+#topic_create {
+  position: relative;
+  margin-left: 5em;
+}
