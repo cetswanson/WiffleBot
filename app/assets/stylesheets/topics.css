@@ -14,6 +14,8 @@
 }
 
 #topic {
+  top: 2em;
+  width: 70em;
   position: relative;
   background-color: rgba(192,192,192, 0.60);
   border: none;
