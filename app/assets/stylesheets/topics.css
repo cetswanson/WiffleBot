@@ -53,3 +53,12 @@
   color: black !important;
   margin-left: 2em;
 }
+
+.newtopicButton {
+  margin-bottom: 2em;
+  margin-left: 40%;
+  margin-right: 40%;
+  width: 15em;
+  color: white;
+  z-index: 3;
+}
