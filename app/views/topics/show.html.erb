@@ -14,8 +14,6 @@
           <%= @topic.replies.count %>
         </div>
         <div class="username">
-          <b>Creator:</b>
-          <%= link_to @topic.user.name, user_path(@topic.user) %>
         </div>
         <div class="created_at">
           <b>Created At:</b>
@@ -34,7 +32,7 @@
 
 
 <a class="btn btn-secondary" role="button" id="replyButton" href="#">Reply</a>
-<div id="reply" hidden>
+<div id="reply">
   <%= form_for [@subforum, @topic, Reply.new] do |f| %>
     <%= f.label :body, "Body: " %>
     <%= f.text_area :body, id: "reply_body" %>
