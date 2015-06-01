@@ -25,6 +25,10 @@ gem 'faker'
 
 gem 'rails_12factor', group: :production
 
+gem 'cancan'
+
+gem 'devise'
+
 group :development, :test do
 
   gem 'rspec-rails', '~> 3.0'

@@ -1,9 +1,10 @@
+<br><br><br>
 <div id="topic_create">
   <%= form_for [@subforum, @topic] do |f| %>
-    <%= f.label :title, "Title: " %>
-    <%= f.text_field :title, id: "topic_title" %>
-    <%= f.label :body, "Body: " %>
-    <%= f.text_area :body, id: "topic_description" %>
-    <button class="small button" name="commit" type="submit">Submit</button>
+    <%= f.label :title, "Title: " %><br>
+    <%= f.text_field :title, id: "topic_title_form" %><br>
+    <%= f.label :body, "Body: " %><br>
+    <%= f.text_area :body, id: "topic_description_form" %>
+    <button type="button small" name="commit" class="btn btn-secondary" type="submit">Create</button>
   <% end %>
 </div>

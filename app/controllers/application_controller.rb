@@ -16,11 +16,4 @@ class ApplicationController < ActionController::Base
     session[:user_id] = nil
   end
 
-  def authenticate_user!(return_point = request.url)
-    if !current_user
-      set_return_point(return_point)
-      redirect_to root_path
-    end
-  end
-
 end

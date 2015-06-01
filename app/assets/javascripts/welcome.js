@@ -6,11 +6,11 @@ ready = function() {
      if ($(".pageTitle").html() == "WiffleBot")  {
        $(".pageTitle").html("Welcome, Brother");
        $(".pageTitle").css("font-size", "5em");
-       $(".layer").css("height", "25%")
+       $(".layer").css("height", "14em")
    } else {
        $(".pageTitle").html("WiffleBot");
        $(".pageTitle").css("font-size", "6em");
-       $(".layer").css("height", "30%")
+       $(".layer").css("height", "15em")
    }
   });
 

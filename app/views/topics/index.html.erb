@@ -22,7 +22,9 @@
         </div>
         <div class="username">
           <b>Creator:</b>
-          <%= topic.user.name %>
+          <% if topic.user %>
+            <%= link_to topic.user.name, user_path(topic.user) %>
+          <% end %>
         </div>
         <div class="created_at">
           <b>Created At:</b>
@@ -37,16 +39,5 @@
     <% end %>
   <% else %>
     </h1>There are currently no topics</h1>
-  <% end %>
-</div>
-
-<a class="btn btn-secondary" role="button" id="newTopicButton" href="#">Add a topic</a>
-<div id="topic_create">
-  <%= form_for [@subforum, Topic.new] do |f| %>
-    <%= f.label :title, "Title: " %>
-    <%= f.text_field :title, id: "topic_title" %>
-    <%= f.label :body, "Body: " %>
-    <%= f.text_area :body, id: "topic_description" %>
-    <button class="btn btn-secondary" id="newTopic" name="commit" type="submit">Submit</button>
   <% end %>
 </div>

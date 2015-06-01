@@ -1,7 +1,11 @@
 class SubforumsController < ApplicationController
 
   def index
-    @subforums = Subforum.all if !Subforum.all.empty?
+    if current_user
+      @subforums = Subforum.all if !Subforum.all.empty?
+    else
+      redirect_to root_path
+    end
   end
 
   def new
@@ -22,7 +26,7 @@ class SubforumsController < ApplicationController
   private
 
   def subforum_params
-    params.require(:subforum).permit(:title, :description, :user_id)
+    params.require(:subforum).permit(:title, :description, :current_user)
   end
 
 end
