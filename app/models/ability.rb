@@ -1,13 +1,9 @@
 class Ability
   include CanCan::Ability
-
   def initialize(user)
-      user ||= User.new
-      if user.admin?
-        can :manage, :all
-      else
-        alias_action :create, :read, :update, :destroy, :to => :crud
-        can :crud, User
-      end
+    can :read, :all                   # allow everyone to read everything
+    if user && user.admin?
+      can :access, :rails_admin       # only allow admin users to access Rails
+    end
   end
 end
