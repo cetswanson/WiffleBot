@@ -29,6 +29,8 @@ gem 'cancan'
 
 gem 'devise'
 
+gem 'rails_admin'
+
 group :development, :test do
 
   gem 'rspec-rails', '~> 3.0'
