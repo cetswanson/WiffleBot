@@ -36,16 +36,6 @@
   <% end %>
 </div>
 
-
-<a class="btn btn-secondary" role="button" id="replyButton" href="#">Reply</a>
-<div id="reply">
-  <%= form_for [@subforum, @topic, Reply.new] do |f| %>
-    <%= f.label :body, "Body: " %>
-    <%= f.text_area :body, id: "reply_body" %>
-    <button class="btn btn-secondary" name="commit" type="submit">Submit</button>
-  <% end %>
-</div>
-
 <div class="replyIndex">
   <% if @topic %>
     <% @topic.replies.all.each do |reply| %>
