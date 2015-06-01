@@ -1,12 +1,18 @@
 <%= image_tag("nazgul.jpg", id: "background") %>
 
 <br><br><br>
+
+<div class="titleLayer">
+</div>
+<h1 class="title">
+  <%= @topic.title %>
+</h1>
+
 <div class="topicIndex">
   <% if @topic %>
     <div class="panel panel-info topic" id="topic">
       <div class="panel-body">
-        <div class="topicTitle">
-          <%= @topic.title %>
+        <div>
           <%= @topic.body %>
         </div>
         <div class="replies">
@@ -27,16 +33,6 @@
     </div>
   <% else %>
     </h1>There are currently no topics</h1>
-  <% end %>
-</div>
-
-
-<a class="btn btn-secondary" role="button" id="replyButton" href="#">Reply</a>
-<div id="reply">
-  <%= form_for [@subforum, @topic, Reply.new] do |f| %>
-    <%= f.label :body, "Body: " %>
-    <%= f.text_area :body, id: "reply_body" %>
-    <button class="btn btn-secondary" name="commit" type="submit">Submit</button>
   <% end %>
 </div>
 
