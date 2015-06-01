@@ -1,6 +1,7 @@
 class RepliesController < ApplicationController
 
   def new
+    @subforum = Subforum.find(params[:subforum_id])
     @topic = Topic.find(params[:topic_id])
 
     if current_user
