@@ -11,8 +11,13 @@
     </ul>
       <% else %>
       <li class="active">
-        <% if @subforum %>
+        <% if @subforum && !@topic %>
           <%= link_to "Add a new topic", new_subforum_topic_path(@subforum) %>
+        <% end %>
+      </li>
+      <li class="active">
+        <% if @subforum && @topic %>
+          <%= link_to "Reply", new_subforum_topic_reply_path(@subforum, @topic) %>
         <% end %>
       </li>
       <form class="navbar-form navbar-left" role="search">

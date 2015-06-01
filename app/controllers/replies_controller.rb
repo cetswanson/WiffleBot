@@ -1,13 +1,9 @@
 class RepliesController < ApplicationController
 
   def new
+    @subforum = Subforum.find(params[:subforum_id])
     @topic = Topic.find(params[:topic_id])
-
-    if current_user
-      @reply = @topic.replies.new
-    else
-      redirect_to topic_path(@topic)
-    end
+    @reply = @topic.replies.new
   end
 
   def create

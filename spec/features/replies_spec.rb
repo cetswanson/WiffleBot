@@ -8,9 +8,7 @@ RSpec.feature "User creates a new reply", :type => :feature do
 
   scenario "with a body" do
     page.set_rack_session(user_id: user.id)
-    visit subforum_topic_path(subforum.id, topic.id)
-
-    click_on "Reply"
+    visit new_subforum_topic_reply_path(subforum.id, topic.id)
 
     fill_in "reply[body]", :with => "test"
 
