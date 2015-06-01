@@ -1,12 +1,19 @@
 <%= image_tag("nazgul.jpg", id: "background") %>
 
 <br><br><br>
+
+<div class="titleLayer">
+</div>
+<h1 class="title">
+  <%= @topic.title %>
+</h1>
+
 <div class="topicIndex">
   <% if @topic %>
     <div class="panel panel-info topic" id="topic">
       <div class="panel-body">
         <div class="topicTitle">
-          <%= @topic.title %>
+        <div>
           <%= @topic.body %>
         </div>
         <div class="replies">
