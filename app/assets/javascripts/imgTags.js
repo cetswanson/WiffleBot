@@ -9,6 +9,10 @@ ready = function() {
       $(".replyImgs").children().last().focus();
     }
   });
+  $("#imgsSubmit").on('click', function(event) {
+    event.preventDefault();
+    console.log("Test")
+  });
 };
 
 $(document).ready(ready);
