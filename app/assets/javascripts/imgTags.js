@@ -10,7 +10,9 @@ ready = function() {
   });
   $("#imgsSubmit").on('click', function(event) {
     event.preventDefault();
-    console.log("Test")
+    var inputVal = $(':focus').val();
+    console.log(inputVal)
+    // $("#reply_body").append($focused);
   });
 };
 
