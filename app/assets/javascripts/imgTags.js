@@ -3,7 +3,7 @@ ready = function() {
 
   $("#addImg").on('keypress', function(event) {
     if (event.keyCode == 13){
-      var newField = '<input type="text" name="imgLink"></input>';
+      var newField = '<input type="text" name="imgLink" id="imgLink"></input>';
       $(".replyImgs").append(newField);
       $(".replyImgs").children().last().focus();
     };
