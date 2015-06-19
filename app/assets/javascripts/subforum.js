@@ -9,6 +9,10 @@ ready = function() {
      $(this).css("background-color", "rgba(192,192,192, 0.8)")
   });
 
+  $(".subforum").on('mouseleave', function(event) {
+     $(this).css("background-color", "rgba(192,192,192, 0.6)")
+  });
+
 };
 
 $(document).ready(ready);
