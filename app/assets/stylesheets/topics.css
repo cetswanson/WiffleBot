@@ -76,3 +76,22 @@
   position: relative;
   margin-left: 5em;
 }
+
+#reply_body {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  resize: none;
+}
+
+#reply_submit {
+  float: right;
+  margin-right: 16%;
+  margin-top: 2%;
+}
+
+#imgTag {
+  float: right;
+  margin-right: 2%;
+  margin-top: 2%
+}
