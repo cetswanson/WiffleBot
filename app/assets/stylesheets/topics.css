@@ -76,3 +76,11 @@
   position: relative;
   margin-left: 5em;
 }
+
+#reply_body {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  resize: none;
+}
+}
