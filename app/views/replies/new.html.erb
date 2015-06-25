@@ -1,8 +1,8 @@
 <br><br><br>
 <div id="reply">
   <%= form_for [@subforum, @topic, @reply] do |f| %>
-    <%= f.text_area :body, id: "reply_body" %>
-    <button class="small button" name="commit" type="submit">Submit</button>
+    <%= f.text_area :body, rows: "10", cols: "120", placehoder: "Reply here...", id: "reply_body" %>
+    <button class="btn btn-primary" name="commit" id="reply_submit" type="submit">Submit</button>
   <% end %>
 </div>
 
