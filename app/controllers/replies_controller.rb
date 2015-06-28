@@ -18,6 +18,12 @@ class RepliesController < ApplicationController
     end
   end
 
+  def update
+    @reply = Reply.find(params[:id])
+    @subforum = Subforum.find(params[:subforum_id])
+    @topic = Subforum.find(params[:topic_id])
+  end
+
   private
 
   def reply_params
