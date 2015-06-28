@@ -39,7 +39,6 @@
           <%= reply.body %>
         </div>
         <div class="username">
-          <b>Creator:</b>
           <%= link_to reply.user.name, user_path(reply.user) unless !reply.user %>
         </div>
         <div class="created_at">
