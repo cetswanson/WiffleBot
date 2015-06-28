@@ -103,4 +103,8 @@
 .created_at {
   float: right;
 }
+
+.user_options {
+  float: left;
+  margin-left: 1em;
 }
