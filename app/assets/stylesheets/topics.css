@@ -99,4 +99,8 @@
 .username {
   float: left;
 }
+
+.created_at {
+  float: right;
+}
 }
