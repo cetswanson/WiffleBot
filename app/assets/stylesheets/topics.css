@@ -95,3 +95,16 @@
   margin-right: 2%;
   margin-top: 2%
 }
+
+.username {
+  float: left;
+}
+
+.created_at {
+  float: right;
+}
+
+.user_options {
+  float: left;
+  margin-left: 1em;
+}

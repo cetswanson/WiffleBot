@@ -1,7 +1,5 @@
 <br><br><br>
 
-<div class="titleLayer">
-</div>
 <h1 class="title">
   <%= @topic.title %>
 </h1>
@@ -16,8 +14,6 @@
         <div class="replies">
           <b>Replies:</b>
           <%= @topic.replies.count %>
-        </div>
-        <div class="username">
         </div>
         <div class="created_at">
           <b>Created At:</b>
@@ -43,13 +39,17 @@
           <%= reply.body %>
         </div>
         <div class="username">
-          <b>Creator:</b>
           <%= link_to reply.user.name, user_path(reply.user) unless !reply.user %>
         </div>
         <div class="created_at">
-          <b>Created At:</b>
           <%= reply.created_at %>
         </div>
+        <% if reply.user = current_user %>
+          <div class="user_options">
+            <%= link_to "Delete", subforum_topic_reply_path(@subforum, @topic, reply), :method => :delete, :class => "btn btn-xs btn-warning" %>
+            <%= link_to "Edit", subforum_topic_reply_path(@subforum, @topic, reply), :method => :put, :class => "btn btn-xs btn-warning" %>
+          </div>
+        <% end %>
       </div>
     </div>
     <% end %>
