@@ -47,7 +47,7 @@
         <% if reply.user = current_user %>
           <div class="user_options">
             <%= link_to "Delete", subforum_topic_reply_path(@subforum, @topic, reply), :method => :delete, :class => "btn btn-xs btn-warning" %>
-            <%= link_to "Edit", subforum_topic_reply_path(@subforum, @topic, reply), :method => :put, :class => "btn btn-xs btn-warning" %>
+            <%= link_to "Edit", subforum_topic_reply_path(@subforum, @topic, reply), :method => :get, :class => "btn btn-xs btn-warning" %>
           </div>
         <% end %>
       </div>
