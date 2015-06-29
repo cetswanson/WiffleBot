@@ -19,16 +19,26 @@ class RepliesController < ApplicationController
   end
 
   def update
-    @reply = Reply.find(params[:id])
     @subforum = Subforum.find(params[:subforum_id])
-    @topic = Subforum.find(params[:topic_id])
+    @topic = Topic.find(params[:topic_id])
+    reply = Reply.find(params[:id])
+    @reply = reply.update_attributes(reply_params)
+
+    redirect_to subforum_topic_path(@subforum, @topic)
+  end
+
+  def show
+    @subforum = Subforum.find(params[:subforum_id])
+    @topic = Topic.find(params[:topic_id])
+    @reply = Reply.find(params[:id])
   end
 
   def destroy
     @reply = Reply.find(params[:id])
     @subforum = Subforum.find(params[:subforum_id])
-    @topic = Subforum.find(params[:topic_id])
+    @topic = Topic.find(params[:topic_id])
     @reply.destroy
+
     redirect_to subforum_topic_path(@subforum, @topic)
   end
 

@@ -1,0 +1,23 @@
+<br><br><br>
+<div id="reply">
+  <%= form_for [@subforum, @topic, @reply] do |f| %>
+    <%= f.text_area :body, rows: "10", cols: "120", :value => @reply.body, id: "reply_body", :html => {:action => :update} %>
+    <button class="btn btn-primary" name="update" id="reply_submit" type="update">Submit</button>
+  <% end %>
+</div>
+
+<button id="imgTag" type="button small" class="btn btn-success" data-toggle="modal" data-target="#imgModal">Image</button>
+
+<div id="imgModal" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Images</h4>
+      </div>
+      <div class="modal-body">
+        <%= render "replies/image" %>
+      </div>
+    </div>
+  </div>
+</div>
