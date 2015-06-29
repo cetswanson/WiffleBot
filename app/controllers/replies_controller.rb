@@ -38,6 +38,7 @@ class RepliesController < ApplicationController
     @subforum = Subforum.find(params[:subforum_id])
     @topic = Topic.find(params[:topic_id])
     @reply.destroy
+
     redirect_to subforum_topic_path(@subforum, @topic)
   end
 
