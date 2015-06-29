@@ -24,6 +24,12 @@ class RepliesController < ApplicationController
     @topic = Topic.find(params[:topic_id])
   end
 
+  def show
+    @subforum = Subforum.find(params[:subforum_id])
+    @topic = Topic.find(params[:topic_id])
+    @reply = Reply.find(params[:id])
+  end
+
   def destroy
     @reply = Reply.find(params[:id])
     @subforum = Subforum.find(params[:subforum_id])
