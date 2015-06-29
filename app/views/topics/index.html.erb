@@ -22,11 +22,9 @@
         </div>
         <div class="username">
           <b>Creator:</b>
-          <% if topic.user %>
-            <%= link_to topic.user.name, user_path(topic.user) %>
-          <% end %>
-        </div>
-        <div class="created_at">
+          <%= topic.user ? topic.user.name : "Ghost" %>
+        </div><br>
+        <div class="created_at" style="float:left">
           <b>Created At:</b>
           <%= topic.created_at %>
         </div>
